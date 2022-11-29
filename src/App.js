@@ -10,6 +10,8 @@ import SelectCompany from "./routes/SelectCompany"
 import Teams from "./routes/Teams"
 import Users from "./routes/UsersRegistry"
 
+import FetchTestApi from "./services/FetchTestApi.js";
+
 function App() {
   return (
     <>
@@ -20,6 +22,7 @@ function App() {
         <Route path= "/select-company" element= {<SelectCompany />} />
         <Route path= "/teams" element= {<Teams />} />
         <Route path= "/users" element= {<Users />} />
+        <Route path= "/api" element= {<FetchTestApi />} />
       </Routes>
     </>
   );
