@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useState } from "react";
 import classes from "../components/projects/Projects.module.css";
 import ProjectList from "../components/projects/ProjectList";
 import Navbar from '../components/Navbar';
+import Popup from "../components/popup/Popup";
 
 const Projects = () => {
   let loadedProjects = [{
@@ -25,14 +26,25 @@ const Projects = () => {
     "active": true,
     "team": 987
   }]
+
+  const [buttonPopup, setButtonPopup] = useState(false);
+
+  function clickNew() {
+    setButtonPopup(true);
+  }
+
   return (
     <section>
       <Navbar />
         <h1 className={classes.h1}>Projects</h1>
         <div className={classes.newActions}>
-          <button>New</button>
+          <button onClick={clickNew}>New</button>
         </div>        
         <ProjectList projects={loadedProjects} />
+        <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
+          <h3>Overlay Template Title</h3>
+          <p>Michael was here...</p>
+        </Popup>
     </section>    
   )
 }

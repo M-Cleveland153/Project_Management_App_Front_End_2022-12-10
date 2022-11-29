@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import AnnouncementList from "../components/announcements/AnnouncementList";
 import classes from "../components/announcements/Announcements.module.css";
 import Navbar from "../components/Navbar";
+import Popup from "../components/popup/Popup";
 
 const Announcements = () => {
   const loadedAnnouncements = [
@@ -33,16 +34,26 @@ const Announcements = () => {
       user: "User Name",
     },
   ];
+  
+  const [buttonPopup, setButtonPopup] = useState(false);
+  
+  function clickNew() {
+    setButtonPopup(true);
+  }
   return (
          
       <section>
       <Navbar />
         <h1 className={classes.h1}>Announcements</h1>
         <div className={classes.actions}>
-          <button>New</button>
+          <button onClick={clickNew}>New</button>
         </div>
         <hr className={classes.hr}></hr>
         <AnnouncementList announcements={loadedAnnouncements} />
+        <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
+          <h3>Overlay Template Title</h3>
+          <p>Michael was here...</p>
+        </Popup>
       </section>
     
   );
