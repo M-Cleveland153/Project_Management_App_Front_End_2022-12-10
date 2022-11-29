@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import UserTable from "../components/users/UserTable";
 import classes from "../components/users/Users.module.css";
+import Popup from "../components/popup/Popup";
 
 const UsersRegistry = () => {
   const loadedUsers = [
@@ -26,6 +27,13 @@ const UsersRegistry = () => {
     }
   ];
 
+
+  const [buttonPopup, setButtonPopup] = useState(false);
+
+  function clickAddUser() {
+    setButtonPopup(true);
+  }
+
   return (
     <html>
       {/* <head>
@@ -47,8 +55,12 @@ const UsersRegistry = () => {
         </table>
       </body>
       <div className={classes.newActions}>
-        <button>Add User</button>
+        <button onClick={clickAddUser}>Add User</button>
       </div>
+      <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
+          <h3>Overlay Template Title</h3>
+          <p>Michael was here...</p>
+        </Popup>
     </html>
   );
 };
