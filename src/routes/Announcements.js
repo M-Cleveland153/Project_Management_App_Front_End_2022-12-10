@@ -35,29 +35,25 @@ const Announcements = () => {
       user: "User Name",
     },
   ];
-  
+
   const [buttonPopup, setButtonPopup] = useState(false);
-  
+
   function clickNew() {
     setButtonPopup(true);
   }
   return (
-         
-      <section>
+    <section>
       <Navbar />
-        <h1 className={classes.h1}>Announcements</h1>
-        <div className={classes.actions}>
-          <button onClick={clickNew}>New</button>
-        </div>
-        <hr className={classes.hr}></hr>
-        <AnnouncementList announcements={loadedAnnouncements} />
-        <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
-          <h3>Overlay Template Title</h3>
-          <p>Michael was here...</p>
-        </Popup>
+      <h1 className={classes.h1}>Announcements</h1>
+      <div className={classes.actions}>
+        <button onClick={clickNew}>New</button>
+      </div>
+      <hr className={classes.hr}></hr>
+      <AnnouncementList announcements={loadedAnnouncements} />
+      <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
         <AddAnnouncement />
-      </section>
-    
+      </Popup>
+    </section>
   );
 };
 
