@@ -6,7 +6,7 @@ function AnnouncementItem(props){
         <li className={classes.li}>
             <Card>
                 <p className={classes.user}>{props.user}</p>
-                <br/>
+               
                 <p className={classes.date}>{props.date}</p>
                 
                 <p className={classes.message}>{props.message}</p>
