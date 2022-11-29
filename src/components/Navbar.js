@@ -16,10 +16,10 @@ const Navbar = () => {
         <p>Acting as admin</p>
       </div>
       <nav ref={navRef}>
-        <a href="/">Home</a>
-        <a href="/">Teams</a>
-        <a href="/">User</a>
-        <a href="/">Projects</a>
+        <a href="/home">Home</a>
+        <a href="/teams">Teams</a>
+        <a href="/users">Users</a>
+        <a href="/projects">Projects</a>
         <a href="/">Logout</a>
         <button className="nav-btn nav-close-btn" onClick={showNavbar}>
           <FaBars />
