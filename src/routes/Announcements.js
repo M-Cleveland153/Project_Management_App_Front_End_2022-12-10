@@ -1,6 +1,7 @@
 import React from "react";
 import AnnouncementList from "../components/announcements/AnnouncementList";
 import classes from "../components/announcements/Announcements.module.css";
+import Navbar from "../components/Navbar";
 
 const Announcements = () => {
   const loadedAnnouncements = [
@@ -33,14 +34,17 @@ const Announcements = () => {
     },
   ];
   return (
-    <section>
-      <h1 className={classes.h1}>Announcements</h1>
-      <div className={classes.actions}>
-        <button >New</button>
-      </div>
-      <hr className={classes.hr}></hr>
-      <AnnouncementList announcements={loadedAnnouncements} />
-    </section>
+         
+      <section>
+      <Navbar />
+        <h1 className={classes.h1}>Announcements</h1>
+        <div className={classes.actions}>
+          <button>New</button>
+        </div>
+        <hr className={classes.hr}></hr>
+        <AnnouncementList announcements={loadedAnnouncements} />
+      </section>
+    
   );
 };
 
