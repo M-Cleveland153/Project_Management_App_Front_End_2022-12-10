@@ -3,6 +3,7 @@ import AnnouncementList from "../components/announcements/AnnouncementList";
 import classes from "../components/announcements/Announcements.module.css";
 import Navbar from "../components/Navbar";
 import Popup from "../components/popup/Popup";
+import AddAnnouncement from "../components/announcements/AddAnnouncement";
 
 const Announcements = () => {
   const loadedAnnouncements = [
@@ -54,6 +55,7 @@ const Announcements = () => {
           <h3>Overlay Template Title</h3>
           <p>Michael was here...</p>
         </Popup>
+        <AddAnnouncement />
       </section>
     
   );
