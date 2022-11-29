@@ -54,6 +54,7 @@ const Announcements = () => {
         <AddAnnouncement />
       </Popup>
     </section>
+
   );
 };
 
