@@ -52,10 +52,9 @@ const Announcements = () => {
         <hr className={classes.hr}></hr>
         <AnnouncementList announcements={loadedAnnouncements} />
         <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
-          <h3>Overlay Template Title</h3>
-          <p>Michael was here...</p>
+          <AddAnnouncement />
         </Popup>
-        <AddAnnouncement />
+        {/* <AddAnnouncement /> */}
       </section>
     
   );
