@@ -12,7 +12,6 @@ import Users from "./routes/UsersRegistry"
 
 function App() {
   return (
-
     <>
       <Routes>
         <Route path= "/" element= {<Login />}/>;
