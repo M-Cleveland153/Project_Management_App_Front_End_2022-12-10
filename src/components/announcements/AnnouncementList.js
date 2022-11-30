@@ -1,7 +1,7 @@
 import AnnouncementItem from "./AnnouncementItem";
 import classes from './Announcements.module.css'
 
-function AnnouncementList(props) {
+const AnnouncementList = (props) => {
   return (
     <ul className={classes.ul}>
       {props.announcements.map((announcement) => (

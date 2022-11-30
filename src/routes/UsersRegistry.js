@@ -1,32 +1,41 @@
 import React, { useState } from "react";
+
 import UserTable from "../components/users/UserTable";
-import classes from "../components/users/Users.module.css";
 import Popup from "../components/popup/Popup";
 
-const UsersRegistry = () => {
-  const loadedUsers = [
-    {
-      id: 987654,
-      first: "Chris",
-      last: "Purnell",
-      email: "cpurnell@cook-sys.org",
-      team: "chic-fil-a",
-      active: true,
-      admin: true,
-      status: "joined",
-    },
-    {
-      id: 987655,
-      first: "Will",
-      last: "Martala",
-      email: "willmartala@cook-sys.org",
-      team: "chic-fil-a",
-      active: true,
-      admin: true,
-      status: "joined",
-    }
-  ];
+import classes from "../components/users/Users.module.css";
 
+import useAxios from "../services/useAxios";
+
+const UsersRegistry = () => {
+  // const loadedUsers = [
+  //   {
+  //     id: 987654,
+  //     first: "Chris",
+  //     last: "Purnell",
+  //     email: "cpurnell@cook-sys.org",
+  //     team: "chic-fil-a",
+  //     active: true,
+  //     admin: true,
+  //     status: "joined",
+  //   },
+  //   {
+  //     id: 987655,
+  //     first: "Will",
+  //     last: "Martala",
+  //     email: "willmartala@cook-sys.org",
+  //     team: "chic-fil-a",
+  //     active: true,
+  //     admin: true,
+  //     status: "joined",
+  //   }
+  // ];
+
+  const { response, loading, error } = useAxios({
+
+    method: 'get',
+    url: '/users'
+  });
 
   const [buttonPopup, setButtonPopup] = useState(false);
 
@@ -35,13 +44,10 @@ const UsersRegistry = () => {
   }
 
   return (
-    <html>
-      {/* <head>
-        <title>HTML Table Header</title>
-      </head> */}
+    <div>
       <h1 className={classes.h1}>User Registry</h1>
       <p>A general view of all your members in your organization</p>
-      <body>
+
         <table border="1">
           <tr>
             <th>Name</th>
@@ -51,17 +57,32 @@ const UsersRegistry = () => {
             <th>Admin</th>
             <th>Status</th>
           </tr>
-          <UserTable users={loadedUsers} />
+
+          {loading ? ( "loading...") : 
+          (
+            <div>
+              {error && (
+                <div>
+                  {error.message}
+                </div>
+              )}
+              <div>         {/* loadedUsers */}
+                <UserTable users={response} />
+                {console.log(response)}
+              </div>
+           </div>
+          )}         
         </table>
-      </body>
+
       <div className={classes.newActions}>
         <button onClick={clickAddUser}>Add User</button>
       </div>
+
       <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
           <h3>Overlay Template Title</h3>
           <p>Michael was here...</p>
-        </Popup>
-    </html>
+      </Popup>
+    </div>
   );
 };
 
