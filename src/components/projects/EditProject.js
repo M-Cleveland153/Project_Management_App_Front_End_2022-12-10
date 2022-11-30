@@ -9,11 +9,11 @@ const EditProject = () => {
         <AiOutlineCloseCircle />
       </button>
       <div>
-        <p class="announcement">project name</p>
+        {/* <p class="announcement">project name</p> */}
         <textarea class="announcement-input" placeholder="Enter project name" name="announcement-input"></textarea>
         </div>
         <div>
-        <p class="announcement">description</p>
+        {/* <p class="announcement">description</p> */}
         <textarea class="announcement-input" placeholder="Enter announcement" name="announcement-input"></textarea>
       </div>
       <button class="submit-btn">Submit</button>
