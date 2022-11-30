@@ -72,10 +72,11 @@
   margin: 30px;
 }
 
-.h1 {
-  color: #1ba098;
-  left: 600px;
+.h1 {  
   position: relative;
+  left: 600px;
+  width: 313px;
+  color: #1ba098;
   font-family: "Mulish";
   font: "Mulish";
   font-style: normal;
