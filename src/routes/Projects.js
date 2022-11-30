@@ -3,6 +3,7 @@ import classes from "../components/projects/Projects.module.css";
 import ProjectList from "../components/projects/ProjectList";
 import Navbar from '../components/Navbar';
 import Popup from "../components/popup/Popup";
+import CreateProject from "../components/projects/CreateProject";
 
 const Projects = () => {
   let loadedProjects = [{
@@ -42,8 +43,7 @@ const Projects = () => {
         </div>        
         <ProjectList projects={loadedProjects} />
         <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
-          <h3>Overlay Template Title</h3>
-          <p>Michael was here...</p>
+          <CreateProject />
         </Popup>
     </section>    
   )
