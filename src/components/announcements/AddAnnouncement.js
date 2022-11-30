@@ -3,17 +3,30 @@ import "./AddAnnouncement.css";
 import { AiOutlineCloseCircle } from "react-icons/ai";
 
 const AddAnnouncement = () => {
+  const setInputHeight = (element, defaultHeight) => {
+    if (element) {
+      const target = element.target ? element.target : element;
+      target.style.height = defaultHeight;
+      target.style.height = `${target.scrollHeight}px`;
+    }
+  };
+
   return (
     <form>
       <button class="close-btn">
         <AiOutlineCloseCircle />
       </button>
-      <p class="posting-user">Posting user</p>
+      <p class="poster">Posting user</p>
       <div>
-        {/* <p class="announcement">announcement</p> */}
-        <textarea class="announcement-input" placeholder="Enter announcement" name="announcement-input"></textarea>
+        <textarea
+          class="announcement-text"
+          placeholder="Enter announcement"
+          name="announcement-input"
+          onChange={(event) => setInputHeight(event, "10px")}
+          maxlength="285"
+        />
       </div>
-      <button class="submit-btn">Submit</button>
+      <button class="submit">Submit</button>
     </form>
   );
 };
