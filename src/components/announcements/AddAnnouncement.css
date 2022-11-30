@@ -12,7 +12,7 @@ form {
   margin: 1.5em;
 }
 
-.posting-user {
+.poster {
   position: absolute;
   left: 9.83%;
   right: 15.25%;
@@ -54,17 +54,31 @@ form {
   color: #deb992;
 }
 
-.announcement-input {
+.announcement-text {
   margin-top: 1.5em;
-  background-color: transparent;
-    border-top-style: hidden;
-    border-left-style: hidden;
-    border-right-style: hidden;
-    border-bottom-style: groove;
-    border-color: white;
-    color: white;
+  width: 313px;
+  height: 20px;
+  max-height: 230px;
+  
+  outline: none;
+  resize: none;
+  font-size: 17px;
+  border-color:#deb992;
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom: 2px solid #deb992;
+  background-color: #0b2d45; 
+  color: #deb992;
+  caret-color: #deb992;
+}
 
-  border: 1px solid #deb992;
+textarea::-webkit-scrollbar{
+  width: 0px;
+}
+
+textarea::placeholder {
+  color:#deb992;
 }
 
 .close-btn {
@@ -86,7 +100,7 @@ form {
   outline: none;
 }
 
-.submit-btn {
+.submit {
   position: absolute;
   width: 199px;
   height: 45px;
