@@ -8,21 +8,26 @@ const CreateTeam = (props) => {
 
   function addMember(idVal) {
     setSelectedMember(idVal);
-    let newMember = {};
-    for (let member of props.availableMembers) {
-      if (member.id == idVal) {
-        newMember = member;
+
+    let index;
+    for (let i = 0; i < props.availableMembers.length; i++) {
+      if (props.availableMembers[i].id == idVal) {
+        let newMember = props.availableMembers[i];
+        index = i;
         props.chosenMembers.push(newMember);
-        props.setChosenMembers(props.chosenMembers);
-        for (let i = 0; i < props.availableMembers.length; i++) {
-          if (props.availableMembers[i] === newMember) {
-            props.availableMembers.splice(i, 1);
-            props.setAvailableMembers(props.availableMembers);
-          }
-        }
+        break;
       }
     }
-    console.log(`CreateTeam: Select Members: chosenMembers: ${JSON.stringify(props.chosenMembers)}`)
+    props.availableMembers.splice(index, 1);
+
+    props.setAvailableMembers(props.availableMembers);
+    props.setChosenMembers(props.chosenMembers);
+
+    console.log(
+      `CreateTeam: Select Members: chosenMembers: ${JSON.stringify(
+        props.chosenMembers
+      )}`
+    );
   }
 
   return (
