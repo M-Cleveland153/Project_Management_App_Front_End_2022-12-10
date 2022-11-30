@@ -12,8 +12,12 @@ const Navbar = () => {
   return (
     <header>
       <div className="navbar-left">
-        <h3>Logo</h3>
-        <p>Acting as admin</p>
+      <img
+          id="login-img"
+          src="https://i.ibb.co/SsFJbm2/team-logo.png"
+          alt="team-logo"
+        />
+        <p class="admin-status">Acting as admin</p>
       </div>
       <nav ref={navRef}>
         <a href="/home">Home</a>
