@@ -5,6 +5,12 @@ import Popup from "../components/popup/Popup";
 
 const Teams = () => {
 
+  
+  
+  
+  
+  
+  
   const [buttonPopup, setButtonPopup] = useState(false);
   
   function clickNew() {
