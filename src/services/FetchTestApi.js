@@ -5,16 +5,16 @@ import useAxios from './useAxios.js';
 const AxiosAPI = () => {
 
     const { response, loading, error } = useAxios({
-        method: 'put',
-        url: '/put',
-        headers: { accept: '*/*' },
-        params: {
-            userId: 14,
-            title: 'The Doctor',
-            homePlanet: 'Gallifrey',
-            age: 'unknown',
-            vehicle: 'T.A.R.D.I.S.'
-        },
+        method: 'get',
+        url: '/users',
+        // headers: { accept: '*/*' },
+        // params: {
+        //     userId: 14,
+        //     title: 'The Doctor',
+        //     homePlanet: 'Gallifrey',
+        //     age: 'unknown',
+        //     vehicle: 'T.A.R.D.I.S.'
+        // },
     });
 
     return (
@@ -30,7 +30,7 @@ const AxiosAPI = () => {
                         </div>
                     )}
                     <div>
-                        {response && <p>{response.args.userId} <br/> {response.args.title} <br/> {response.args.homePlanet} <br/> {response.args.vehicle}</p>}
+                        {response && <p>{ response[0].title }</p>}
                         {console.log(response)}
                     </div>
                 </div>

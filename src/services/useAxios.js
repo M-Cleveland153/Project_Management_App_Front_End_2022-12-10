@@ -3,7 +3,7 @@ import {useState, useEffect } from 'react';
 import axios from 'axios';
 import axiosRetry from 'axios-retry';
 
-axios.defaults.baseURL = 'https://httpbin.org/';
+axios.defaults.baseURL = 'http://localhost:8000';
 
 axiosRetry(axios, { retries: 3 });
 
