@@ -10,7 +10,7 @@ const AddAnnouncement = () => {
       </button>
       <p class="posting-user">Posting user</p>
       <div>
-        <p class="announcement">announcement</p>
+        {/* <p class="announcement">announcement</p> */}
         <textarea class="announcement-input" placeholder="Enter announcement" name="announcement-input"></textarea>
       </div>
       <button class="submit-btn">Submit</button>
