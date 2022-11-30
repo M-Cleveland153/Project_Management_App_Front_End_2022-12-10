@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import classes from "./Projects.module.css";
 import Popup from "../popup/Popup";
+import EditProject from "./EditProject";
 
 function ProjectItem(props) {
   const [buttonPopup, setButtonPopup] = useState(false);
@@ -17,8 +18,7 @@ function ProjectItem(props) {
         <button onClick={clickEdit}>Edit</button>
       </div>
       <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
-        <h3>Overlay Template Title</h3>
-        <p>Michael was here...</p>
+        <EditProject />
       </Popup>
     </li>
   );
