@@ -7,8 +7,6 @@ import Navbar from "../components/Navbar";
 
 import Popup from "../components/popup/Popup";
 
-import classes from "../components/users/Users.module.css";
-
 import useAxios from "../services/useAxios";
 
 const UsersRegistry = () => {
