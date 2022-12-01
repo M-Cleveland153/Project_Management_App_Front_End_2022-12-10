@@ -6,6 +6,7 @@ import Popup from "../components/popup/Popup";
 import classes from "../components/users/Users.module.css";
 
 import useAxios from "../services/useAxios";
+import AddUser from "../components/users/AddUser";
 
 const UsersRegistry = () => {
   // const loadedUsers = [
@@ -78,8 +79,7 @@ const UsersRegistry = () => {
       </div>
 
       <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
-          <h3>Overlay Template Title</h3>
-          <p>Michael was here...</p>
+          <AddUser />
       </Popup>
     </div>
   );
