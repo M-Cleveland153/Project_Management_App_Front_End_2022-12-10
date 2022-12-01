@@ -1,24 +1,24 @@
 .message {
   /* position: absolute;
-  width: 616px;
-  height: 256px;
-  left: 556px;
-  top: 419px;
-
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 32px;
+    width: 616px;
+    height: 256px;
+    left: 556px;
+    top: 419px;
   
-  font-feature-settings: "salt" on, "liga" off; */
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 32px;
+    
+    font-feature-settings: "salt" on, "liga" off; */
 
   color: #ffffff;
   /* position: absolute;
-  width: 616px;
-  height: 256px;
-  left: 556px;
-  top: 419px; */
+    width: 616px;
+    height: 256px;
+    left: 556px;
+    top: 419px; */
   padding-left: 5%;
   padding-right: 5%;
   padding-top: 3%;
@@ -77,9 +77,6 @@
   left: 600px;
   width: 313px;
   position: relative;
-  left: 600px;
-  width: 313px;
-  color: #1ba098;
   font-family: "Mulish";
   font: "Mulish";
   font-style: normal;
@@ -116,4 +113,34 @@
   width: 1050px;
   position: relative;
   left: 200px;
+}
+.teams {
+  display: grid;
+  grid-template-columns: 200px 200px 200px;
+  grid-template-rows: 200px 200px 200px;
+  grid-row-gap: 200px;
+  grid-column-gap: 200px;
+  margin-top: auto;
+  justify-content: center;
+}
+
+.teamCards {
+  height: 200px;
+  width: 200px;
+  background-color: aqua;
+}
+
+p {
+  color: white;
+}
+
+.teamMembers {
+  display: grid;
+  grid-template-columns: 50px 50px 50px;
+  grid-template-rows: 50px 50px 50px;
+  grid-row-gap: 20px;
+  grid-column-gap: 20px;
+  margin-top: auto;
+  justify-content: center;
+  
 }
