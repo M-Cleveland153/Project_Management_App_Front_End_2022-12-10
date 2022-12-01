@@ -54,6 +54,7 @@ const Announcements = () => {
   return (
     <section>
       <Navbar />
+      <div className={classes.layout}>
       <h1 className={classes.h1}>Announcements</h1>
 
       <div className={classes.actions}>
@@ -77,6 +78,7 @@ const Announcements = () => {
             </div>
         </div>
       )}
+      </div>
 
       <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
         <AddAnnouncement />
