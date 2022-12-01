@@ -1,12 +1,19 @@
 import React from "react";
-import { BrowserRouter, Route, withRouter } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
 import "../components/selectCompany/SelectCompanyStyle.css";
 
 const SelectCompany = () => {
+  const navigate = useNavigate();
+
+  const changePage = (event) => {
+    navigate("/home");
+  };
+
   return (
     <div id="select-company-container">
       <h1 id="select-company-h1">Select Company</h1>
-      <select id="select-company-menu">
+      <select id="select-company-menu" onChange={changePage}>
         <option value="" disabled selected hidden>
           Pick an option
         </option>

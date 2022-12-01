@@ -6,6 +6,7 @@ import classes from "../components/users/Users.module.css";
 import Navbar from "../components/Navbar";
 
 import Popup from "../components/popup/Popup";
+import AddUser from "../components/users/AddUser";
 
 import useAxios from "../services/useAxios";
 
@@ -34,9 +35,8 @@ const UsersRegistry = () => {
   // ];
 
   const { response, loading, error } = useAxios({
-
-    method: 'get',
-    url: '/users'
+    method: "get",
+    url: "/users",
   });
 
   const [buttonPopup, setButtonPopup] = useState(false);
@@ -46,25 +46,21 @@ const UsersRegistry = () => {
   }
 
   return (
-
     <div>
-
-   
       <Navbar />
 
       <h1 className={classes.h1}>User Registry</h1>
       <p>A general view of all your members in your organization</p>
 
-        <table border="1">
-          {loading ? ( "loading...") : 
-          (
+      <table border="1">
+        {loading ? (
+          "loading..."
+        ) : (
+          <div>
+            {error && <div>{error.message}</div>}
             <div>
-              {error && (
-                <div>
-                  {error.message}
-                </div>
-              )}
-              <div>         {/* loadedUsers */}
+              {" "}
+              {/* loadedUsers */}
               <tr>
                 <th>Name</th>
                 <th>Email</th>
@@ -73,20 +69,19 @@ const UsersRegistry = () => {
                 <th>Admin</th>
                 <th>Status</th>
               </tr>
-                <UserTable users={response} />
-                {console.log(response)}
-              </div>
-           </div>
-          )}         
-        </table>
+              <UserTable users={response} />
+              {console.log(response)}
+            </div>
+          </div>
+        )}
+      </table>
 
       <div className={classes.newActions}>
         <button onClick={clickAddUser}>Add User</button>
       </div>
 
       <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
-          <h3>Overlay Template Title</h3>
-          <p>Michael was here...</p>
+        <AddUser />
       </Popup>
     </div>
   );
