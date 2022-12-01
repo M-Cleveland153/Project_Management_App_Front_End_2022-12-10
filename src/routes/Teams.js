@@ -34,8 +34,7 @@ const Teams = () => {
   //     numberOfProjects: 1,
   //     members: ["Andre", "Michael", "Guy", "Anthony"]
   //   },
-
-  ]
+  //]
 
 
   const loadedMembers = [
@@ -46,7 +45,7 @@ const Teams = () => {
     { id: 9875, name: "Ryan" },
     { id: 9876, name: "Michael" },
 
-  // ];
+  ];
 
   const { response, loading, error } = useAxios({
 

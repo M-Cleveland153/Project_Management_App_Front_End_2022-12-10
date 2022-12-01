@@ -1,15 +1,13 @@
 import React, { useEffect, useState } from "react";
 
 import UserTable from "../components/users/UserTable";
-
-import classes from "../components/users/Users.module.css";
 import Navbar from "../components/Navbar";
-
 import Popup from "../components/popup/Popup";
 import AddUser from "../components/users/AddUser";
 
+import classes from "../components/users/Users.module.css";
+
 import useAxios from "../services/useAxios";
-import AddUser from "../components/users/AddUser";
 
 const UsersRegistry = () => {
   // const loadedUsers = [
