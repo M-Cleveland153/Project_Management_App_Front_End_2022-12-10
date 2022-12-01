@@ -3,15 +3,20 @@ import classes from "./Teams.module.css";
 
 function TeamItem(props) {
   return (
-    <li className={classes.li}>
-      <Card>
-        <p>{props.teamName}</p>
-
-        <p>{props.numberOfProjects}</p>
-
-        <p>{props.members}</p>
-      </Card>
-    </li>
+    <Card>
+      <div>
+        <div>
+          <p>{props.teamName}</p>
+          <p>{props.numberOfProjects}</p>
+          <p>{props.members}</p>
+        </div>
+        <div className={classes.teamMembers}>
+          {props.members.map((member) => (
+            <button> {member}</button>
+          ))}
+        </div>
+      </div>
+    </Card>
   );
 }
 

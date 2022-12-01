@@ -9,14 +9,23 @@ const Teams = () => {
     {
       teamName: "Mavericks",
       numberOfProjects: 1,
-      members: "Andre",
+      members: ["Andre", "Michael", "Guy", "Anthony"]
     },
     {
-      teamName: "Mavericks",
+      teamName: "Rockets",
       numberOfProjects: 1,
-      members: "Andre",
-    }
-   
+      members: ["Andre", "Michael", "Guy", "Anthony"]
+    },
+    {
+      teamName: "Bears",
+      numberOfProjects: 1,
+      members: ["Andre", "Michael", "Guy", "Anthony"]
+    },
+    {
+      teamName: "Hornets",
+      numberOfProjects: 1,
+      members: ["Andre", "Michael", "Guy", "Anthony"]
+    },
   ];
 
   const [buttonPopup, setButtonPopup] = useState(false);
@@ -32,7 +41,7 @@ const Teams = () => {
       {/* <div className={classes.actions}>
         <button onClick={clickNew}>New Team</button>
       </div> */}
-      <TeamList teams={loadedTeams}/>
+      <TeamList teams={loadedTeams} />
 
       {/* <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
         <h3>Overlay Template Title</h3>
