@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import UserTable from "../components/users/UserTable";
 import classes from "../components/users/Users.module.css";
+import Navbar from "../components/Navbar";
 import Popup from "../components/popup/Popup";
 import AddUser from "../components/users/AddUser";
 
@@ -39,6 +40,7 @@ const UsersRegistry = () => {
       {/* <head>
         <title>HTML Table Header</title>
       </head> */}
+      <Navbar />
       <h1 className={classes.h1}>User Registry</h1>
       <p>A general view of all your members in your organization</p>
       <body>
