@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import UserTable from "../components/users/UserTable";
 import Popup from "../components/popup/Popup";
@@ -49,15 +49,6 @@ const UsersRegistry = () => {
       <p>A general view of all your members in your organization</p>
 
         <table border="1">
-          <tr>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Team</th>
-            <th>Active</th>
-            <th>Admin</th>
-            <th>Status</th>
-          </tr>
-
           {loading ? ( "loading...") : 
           (
             <div>
@@ -67,6 +58,14 @@ const UsersRegistry = () => {
                 </div>
               )}
               <div>         {/* loadedUsers */}
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Team</th>
+                <th>Active</th>
+                <th>Admin</th>
+                <th>Status</th>
+              </tr>
                 <UserTable users={response} />
                 {console.log(response)}
               </div>

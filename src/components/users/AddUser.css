@@ -12,7 +12,7 @@ form {
   margin: 1.5em;
 }
 
-.poster {
+.posting-user {
   position: absolute;
   left: 9.83%;
   right: 15.25%;
@@ -34,7 +34,8 @@ form {
 }
 
 .announcement {
-  position: absolute;
+  /* position: absolute; */
+  position: relative;
   left: 18.22%;
   right: 58.86%;
   top: 38.44%;
@@ -54,31 +55,30 @@ form {
   color: #deb992;
 }
 
-.announcement-text {
+.announcement-input {
   margin-top: 1.5em;
-  width: 313px;
-  height: 20px;
-  max-height: 230px;
-  
-  outline: none;
-  resize: none;
-  font-size: 17px;
-  border-color:#deb992;
+  background-color: transparent;
   border-top-style: hidden;
-  border-right-style: hidden;
   border-left-style: hidden;
-  border-bottom: 2px solid #deb992;
-  background-color: #0b2d45; 
-  color: #deb992;
-  caret-color: #deb992;
+  border-right-style: hidden;
+  border-bottom-style: groove;
+  border-color: white;
+  color: white;
+
+  border: 1px solid #deb992;
 }
 
-textarea::-webkit-scrollbar{
-  width: 0px;
-}
+.email-input {
+  margin-top: 1.5em;
+  background-color: transparent;
+  border-top-style: hidden;
+  border-left-style: hidden;
+  border-right-style: hidden;
+  border-bottom-style: groove;
+  border-color: white;
+  color: white;
 
-textarea::placeholder {
-  color:#deb992;
+  border: 1px solid #deb992;
 }
 
 .close-btn {
@@ -100,7 +100,7 @@ textarea::placeholder {
   outline: none;
 }
 
-.submit {
+.submit-btn {
   position: absolute;
   width: 199px;
   height: 45px;
@@ -110,4 +110,8 @@ textarea::placeholder {
   background: #1ba098;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 10.2875px;
+}
+
+.para {
+  color: #deb992;
 }
