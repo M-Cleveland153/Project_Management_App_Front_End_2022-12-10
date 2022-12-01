@@ -1,8 +1,10 @@
 import classes from "./CreateTeam.css";
+
 function ChosenItem(props) {
+
   function removeMember(idVal) {
     let index;
-    for (let i = 0; i < props.chosenMembers.lenth; i++) {
+    for (let i = 0; i < props.chosenMembers.length; i++) {
       if (props.chosenMembers[i].id == idVal) {
         let newMember = props.chosenMembers[i];
         index = i;
@@ -14,17 +16,18 @@ function ChosenItem(props) {
 
     props.setAvailableMembers(props.availableMembers);
     props.setChosenMembers(props.chosenMembers);
+    console.log(`ChosenItem.js: end of for: chosenMembers: ${JSON.stringify(props.chosenMembers)}`)
   }
 
   return (
-    <>
+    <div  >
       <span className="name-pills">{props.memberName}</span>
-      <button value={props.id} onClick={removeMember.bind(this, props.id)}>
+      <button type="button" value={props.id} onClick={removeMember.bind(this, props.id)}>
         {" "}
         {/*without bind, only one member will be chosen at a time.*/}
         remove
       </button>
-    </>
+    </div>
   );
 }
 

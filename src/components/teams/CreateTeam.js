@@ -31,46 +31,50 @@ const CreateTeam = (props) => {
   }
 
   return (
-    <form>
-      <button class="close-btn">
-        <AiOutlineCloseCircle />
-      </button>
-      <div>
-        <textarea
-          class="announcement-input"
-          placeholder="Enter team name"
-          name="announcement-input"
-        ></textarea>
-        <br />
-        <textarea
-          class="announcement-input"
-          placeholder="Enter description"
-          name="announcement-input"
-        ></textarea>
+    
+      // <div className="form">
+      <form>
+        <button class="close-btn">
+          <AiOutlineCloseCircle />
+        </button>
+        <div>
+          <textarea
+            class="announcement-input"
+            placeholder="Enter team name"
+            name="announcement-input"
+          ></textarea>
+          <br />
+          <textarea
+            class="announcement-input"
+            placeholder="Enter description"
+            name="announcement-input"
+          ></textarea>
 
-        <h2>Select Members</h2>
-        <select
-          value={selectedMember}
-          // onChange={(event) => setSelectedMember(event.target.value)}
-          onChange={(event) => addMember(event.target.value)}
-        >
-          <option value="" />
+          <h2>Select Members</h2>
+          <select
+            value={selectedMember}
+            // onChange={(event) => setSelectedMember(event.target.value)}
+            onChange={(event) => addMember(event.target.value)}
+          >
+            <option value="" />
 
-          {props.availableMembers.map((member) => (
-            <option key={member.id} value={member.id}>
-              {member.name}
-            </option>
-          ))}
-        </select>
-        <ChosenMembers
-          availableMembers={props.availableMembers}
-          chosenMembers={props.chosenMembers}
-          setAvailableMembers={props.setAvailableMembers}
-          setChosenMembers={props.setChosenMembers}
-        />
-      </div>
-      <button class="submit-btn">Submit</button>
-    </form>
+            {props.availableMembers.map((member) => (
+              <option key={member.id} value={member.id}>
+                {member.name}
+              </option>
+            ))}
+          </select>
+          <ChosenMembers
+            availableMembers={props.availableMembers}
+            chosenMembers={props.chosenMembers}
+            setAvailableMembers={props.setAvailableMembers}
+            setChosenMembers={props.setChosenMembers}
+          />
+        </div>
+        <button class="submit-btn">Submit</button>
+      {/* </div>      */}
+      </form>
+    
   );
 };
 
