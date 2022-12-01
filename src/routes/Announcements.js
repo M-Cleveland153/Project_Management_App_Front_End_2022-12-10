@@ -62,7 +62,7 @@ const Announcements = () => {
 
       <hr className={classes.hr}></hr>
 
-      loading & error handling for API response */}         
+      {/*loading & error handling for API response */}         
       {loading ? ( <p>loading...</p>) : 
        (
         <div>
