@@ -1,8 +1,48 @@
-import React, { useRef } from "react";
+import React, { useState } from "react";
+
 import "./AddUser.css";
 import { AiOutlineCloseCircle } from "react-icons/ai";
 
+import axios from 'axios';
+
 const AddUser = () => {
+
+  const [ newUser, setNewUser ] = useState({
+    credentials: {},
+    announcement: {}
+  });
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    setNewUser({
+      "credentials": {"username": "satoro_gojo",
+                      "password": "thestrongest4ever"},
+             "user": {"credentials": {
+                          "username": "satoro_gojo",
+                          "password": "thestrongest4ever"},
+                      "profile": {
+                          "first": "Gojo",
+                          "last": "Satoro",
+                          "email": "jujutsu_high@earthlink.net",
+                          "phone": "865-932-4786"
+                      },
+                      "active": true,
+                      "admin": true,
+                      "status": "Active",
+                      "team": "Sukuna's Bane",
+                      "company": "Jujutsu Academy"
+                      }
+    });
+
+    axios.post("https://httpbin.org/post", newUser)
+      .then((response) => {
+        console.log(response.status)
+        console.log(JSON.parse(response.data.data))
+      });
+  };
+
+
   return (
     <form>
       <button class="close-btn">
@@ -44,7 +84,7 @@ const AddUser = () => {
         </select>
       </div>
 
-      <button class="submit-btn">Submit</button>
+      <button class="submit-btn" onClick={handleSubmit}>Submit</button>
     </form>
   );
 };

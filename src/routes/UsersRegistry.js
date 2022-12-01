@@ -2,12 +2,13 @@ import React, { useEffect, useState } from "react";
 
 import UserTable from "../components/users/UserTable";
 
-import classes from "../components/users/Users.module.css";
 import "../components/users/UsersStyle.css";
-import Navbar from "../components/Navbar";
 
+import Navbar from "../components/Navbar";
 import Popup from "../components/popup/Popup";
 import AddUser from "../components/users/AddUser";
+
+import classes from "../components/users/Users.module.css";
 
 import useAxios from "../services/useAxios";
 
@@ -83,10 +84,11 @@ const UsersRegistry = () => {
           <button onClick={clickAddUser}>Add User</button>
         </div>
 
-        <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
+
+      <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
           <AddUser />
-        </Popup>
-      </div>
+      </Popup>
+      
     </div>
   );
 };
