@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 
-import AnnouncementList from "../components/announcements/AnnouncementList";
-import classes from "../components/announcements/Announcements.module.css";
 import Navbar from "../components/Navbar";
+import AnnouncementList from "../components/announcements/AnnouncementList";
 import Popup from "../components/popup/Popup";
 import AddAnnouncement from "../components/announcements/AddAnnouncement";
+
+import classes from "../components/announcements/Announcements.module.css";
 
 import useAxios from "../services/useAxios";
 
@@ -81,7 +82,6 @@ const Announcements = () => {
         <AddAnnouncement />
       </Popup>
     </section>
-
   );
 };
 

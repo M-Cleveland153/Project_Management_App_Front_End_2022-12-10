@@ -1,8 +1,12 @@
-import React, { useRef } from "react";
+import React, { useState } from "react";
+
 import "./AddAnnouncement.css";
 import { AiOutlineCloseCircle } from "react-icons/ai";
 
+import axios from 'axios';
+
 const AddAnnouncement = () => {
+
   const setInputHeight = (element, defaultHeight) => {
     if (element) {
       const target = element.target ? element.target : element;
@@ -10,6 +14,31 @@ const AddAnnouncement = () => {
       target.style.height = `${target.scrollHeight}px`;
     }
   };
+
+
+  const [ newAnnouncement, setNewAnnouncement ] = useState({
+    credentials: {},
+    announcement: {}
+  });
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    setNewAnnouncement({
+      "credentials": {"username": "morgoth",
+                      "password": "simlaril"},
+      "announcement": {"title": "RE: The Valar",
+                     "message": "Lets eat their cool lights",
+                     "company": "Orodruin", author: "Melkor"}
+    });
+
+    axios.post("https://httpbin.org/post", newAnnouncement)
+      .then((response) => {
+        console.log(response.status)
+        console.log(JSON.parse(response.data.data))
+      });
+  };
+
 
   return (
     <form>
@@ -26,7 +55,7 @@ const AddAnnouncement = () => {
           maxlength="285"
         />
       </div>
-      <button class="submit">Submit</button>
+      <button class="submit" onClick= {handleSubmit}>Submit</button>
     </form>
   );
 };
