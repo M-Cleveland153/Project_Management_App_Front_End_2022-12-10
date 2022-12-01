@@ -6,10 +6,6 @@ import classes from "../components/users/Users.module.css";
 import Navbar from "../components/Navbar";
 
 import Popup from "../components/popup/Popup";
-<<<<<<< HEAD
-=======
-import AddUser from "../components/users/AddUser";
->>>>>>> 44be4da64c00d213312d19c849e3c7faab2ea19f
 
 import useAxios from "../services/useAxios";
 import AddUser from "../components/users/AddUser";
