@@ -9,6 +9,7 @@ import Popup from "../components/popup/Popup";
 import AddUser from "../components/users/AddUser";
 
 import useAxios from "../services/useAxios";
+import AddUser from "../components/users/AddUser";
 
 const UsersRegistry = () => {
   // const loadedUsers = [
@@ -81,7 +82,7 @@ const UsersRegistry = () => {
       </div>
 
       <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
-        <AddUser />
+          <AddUser />
       </Popup>
     </div>
   );
