@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../components/login/LoginStyles.css";
 
 const Login = () => {
@@ -28,7 +29,9 @@ const Login = () => {
           type="text"
           name="password"
         />
-        <button id="login-button">LOG IN</button>
+        <Link to="/select-company">
+          <button id="login-button">LOG IN</button>
+        </Link>
       </form>
     </div>
   );
