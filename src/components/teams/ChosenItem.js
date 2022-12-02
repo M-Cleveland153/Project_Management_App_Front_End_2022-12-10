@@ -1,4 +1,6 @@
 import classes from "./CreateTeam.css";
+import { AiOutlineCloseCircle } from "react-icons/ai";
+
 
 function ChosenItem(props) {
 
@@ -22,10 +24,12 @@ function ChosenItem(props) {
   return (
     <div  >
       <span className="name-pills">{props.memberName}</span>
-      <button type="button" value={props.id} onClick={removeMember.bind(this, props.id)}>
-        {" "}
+      <button className="close-btnmc" type="button" value={props.id} onClick={removeMember.bind(this, props.id)}>
+        {/* {" "} */}
         {/*without bind, only one member will be chosen at a time.*/}
-        remove
+        {/* remove */}
+        <AiOutlineCloseCircle />
+        
       </button>
     </div>
   );
