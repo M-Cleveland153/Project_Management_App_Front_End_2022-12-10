@@ -21,7 +21,7 @@ function ProjectItem(props) {
       </div>
       <div className={classes.projItemPopupDiv}>
         <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
-          <EditProject />
+          <EditProject projectName={props.name} projDescription={props.description}/>
         </Popup>
       </div>
     </li>

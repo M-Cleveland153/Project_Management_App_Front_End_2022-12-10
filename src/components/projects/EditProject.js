@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import "./EditProject.css";
 import { AiOutlineCloseCircle } from "react-icons/ai";
 
-const EditProject = () => {
+const EditProject = (props) => {
   const setInputHeight = (element, defaultHeight) => {
     if (element) {
       const target = element.target ? element.target : element;
@@ -18,13 +18,13 @@ const EditProject = () => {
         <AiOutlineCloseCircle />
       </button>
       <div class="inputs">
-        <input class="project-name" placeholder="Enter project name"></input>
+        <textarea class="project-name" placeholder="Enter project name">{props.projectName}</textarea>
 
         <textarea
           class="project-info"
           placeholder="Enter description"
           onChange={(event) => setInputHeight(event, "10px")}
-        ></textarea>
+        >{props.projDescription}</textarea>
       </div>
       <button class="submit-btn">Submit</button>
     </form>
