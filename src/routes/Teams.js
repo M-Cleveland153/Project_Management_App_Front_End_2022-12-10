@@ -7,7 +7,6 @@ import classes from "../components/announcements/Announcements.module.css";
 import useAxios from "../services/useAxios";
 
 const Teams = () => {
-
   // const loadedTeams = [
   //   {
   //     teamName: "Mavericks",
@@ -31,7 +30,6 @@ const Teams = () => {
   //   },
   //]
 
-
   const loadedMembers = [
     { id: 9871, name: "Guy" },
     { id: 9872, name: "Jeremy" },
@@ -39,16 +37,12 @@ const Teams = () => {
     { id: 9874, name: "Andre" },
     { id: 9875, name: "Ryan" },
     { id: 9876, name: "Michael" },
-
   ];
 
   const { response, loading, error } = useAxios({
-
-    method: 'get',
-    url: '/teams'
-  })
-
-
+    method: "get",
+    url: "/teams",
+  });
 
   const [buttonPopup, setButtonPopup] = useState(false);
 
@@ -83,21 +77,21 @@ const Teams = () => {
         <button onClick={clickNew}>New Team</button>
       </div> */}
 
-      {loading ? ( <p>loading...</p>) : 
-      (
+      {loading ? (
+        <p>loading...</p>
+      ) : (
         <div>
           {error && (
             <div>
               <p>{error.message}</p>
             </div>
-           )}
-          <div>                
+          )}
+          <div>
             <TeamList teams={response} />
             {console.log(response)}
           </div>
         </div>
       )}
-      
 
       {/* <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
         <h3>Overlay Template Title</h3>
