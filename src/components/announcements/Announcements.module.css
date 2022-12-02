@@ -131,6 +131,7 @@
 .title {
   display: flex;
   color: white;
+  align-items: center;
 }
 
 .title > p {
