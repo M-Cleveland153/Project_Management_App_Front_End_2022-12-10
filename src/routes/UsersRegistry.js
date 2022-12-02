@@ -86,7 +86,7 @@ const UsersRegistry = () => {
 
 
       <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
-          <AddUser />
+          <AddUser setTrigger={setButtonPopup}/>
       </Popup>
       
     </div>

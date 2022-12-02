@@ -22,7 +22,7 @@ function ProjectItem(props) {
       </div>
       <div className={classes.projItemPopupDiv}>
         <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
-          <EditProject projectName={props.name} projDescription={props.description}/>
+          <EditProject setTrigger={setButtonPopup} projectName={props.name} projDescription={props.description}/>
         </Popup>
       </div>
     </li>

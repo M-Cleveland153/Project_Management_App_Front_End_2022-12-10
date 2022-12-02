@@ -71,6 +71,7 @@
 }
 
 .editActions button {
+  cursor: pointer;
   /* color: #ffffff; */
   background-color: #deb992;
   position: relative;
@@ -93,6 +94,7 @@
 }
 
 .newActions button{
+  cursor: pointer;
      /* color: #ffffff; */
   background-color: #1ba098;
   position: relative;

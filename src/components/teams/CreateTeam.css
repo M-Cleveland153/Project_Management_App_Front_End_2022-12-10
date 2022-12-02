@@ -88,6 +88,7 @@
 }
 
 .submit-btn {
+  cursor: pointer;
   position: absolute;
   width: 199px;
   height: 45px;

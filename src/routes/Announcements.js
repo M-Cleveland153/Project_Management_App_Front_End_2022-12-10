@@ -82,7 +82,7 @@ const Announcements = () => {
       </div>
 
       <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
-        <AddAnnouncement />
+        <AddAnnouncement setTrigger={setButtonPopup}/>
       </Popup>
     </section>
   );

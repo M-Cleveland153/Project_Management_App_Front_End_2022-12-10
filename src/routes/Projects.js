@@ -68,7 +68,7 @@ const Projects = () => {
 
       <div className={classes.projItemPopupDiv}>
         <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
-          <CreateProject />
+          <CreateProject setTrigger={setButtonPopup}/>
         </Popup>
       </div>
     </section>

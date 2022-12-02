@@ -92,13 +92,14 @@
   line-height: 150%;
 }
 
-.layout{
+.layout {
   display: flex;
   flex-direction: column;
   padding-left: 120px;
 }
 
 .actions button {
+  cursor: pointer;
   /* color: #ffffff; */
   background-color: #1ba098;
   position: relative;
@@ -138,3 +139,5 @@
   width: auto;
   margin-left: auto;
 }
+
+
