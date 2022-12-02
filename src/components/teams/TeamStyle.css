@@ -1,0 +1,23 @@
+#create-team-container{
+    display: flex;
+    justify-content: center;
+    padding-top: 10rem;
+    padding-bottom: 5rem;
+}
+
+#create-team-button{
+    cursor: pointer;
+    padding: 0rem 6rem 1rem 6rem;
+    background-color: transparent;
+    border-color: #DEB992;
+    border-radius: 1rem;
+    color: #DEB992;
+}
+
+#create-team-button-plus{
+    font-size: 20em;
+}
+
+#create-team-button:hover{
+    background-color: #0b2d45;
+}

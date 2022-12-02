@@ -4,6 +4,7 @@ import Popup from "../components/popup/Popup";
 import CreateTeam from "../components/teams/CreateTeam";
 import TeamList from "../components/teams/TeamList";
 import classes from "../components/announcements/Announcements.module.css";
+import "../components/teams/TeamStyle.css";
 import useAxios from "../services/useAxios";
 
 const Teams = () => {
@@ -97,8 +98,11 @@ const Teams = () => {
         <h3>Overlay Template Title</h3>
         <p>Michael was here...</p>
       </Popup>{" "} */}
-      <div className={classes.actions}>
-        <button onClick={clickNew}>New Team</button>
+      <div id="create-team-container">
+        <button id="create-team-button" onClick={clickNew}>
+          <p id="create-team-button-plus">+</p>
+          New Team
+        </button>
       </div>
 
       <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
