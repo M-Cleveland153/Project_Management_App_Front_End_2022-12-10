@@ -127,3 +127,14 @@
   position: relative;
   left: 200px;
 }
+
+.title {
+  display: flex;
+  color: white;
+  align-items: center;
+}
+
+.title > p {
+  width: auto;
+  margin-left: auto;
+}

@@ -58,6 +58,8 @@
 
 .login-input {
     margin-top: 1rem;
+    caret-color: white;
+    color: white;
 }
 
 input[name="username"] {
@@ -86,4 +88,12 @@ input[name="password"] {
 
 input[name="password"]::placeholder{
     color:#1BA098;
+}
+
+.login-input:focus::placeholder {
+    color: transparent;
+}
+
+#login-button:disabled{
+    background-color: #666;
 }

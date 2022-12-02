@@ -8,6 +8,7 @@ function ProjectList(props) {
         <ProjectItem
           key={project.id}
           id={project.id}
+          date={project.date}
           name={project.name}
           description={project.description}
         />

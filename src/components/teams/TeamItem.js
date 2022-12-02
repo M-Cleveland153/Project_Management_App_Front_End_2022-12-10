@@ -4,11 +4,10 @@ import classes from "./Teams.module.css";
 function TeamItem(props) {
   return (
     <Card>
-      <div>
-        <div>
+      <div className={classes.cardLayout}>
+        <div className={classes.teamInfo}>
           <p>{props.teamName}</p>
-          <p>{props.numberOfProjects}</p>
-          <p>{props.members}</p>
+          <p>Projects: {props.numberOfProjects}</p>
         </div>
         <div className={classes.teamMembers}>
           {props.members.map((member) => (
