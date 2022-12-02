@@ -2,10 +2,12 @@ import React, { useEffect, useState } from "react";
 
 import UserTable from "../components/users/UserTable";
 
-import classes from "../components/users/Users.module.css";
-import Navbar from "../components/Navbar";
+import "../components/users/UsersStyle.css";
 
+import Navbar from "../components/Navbar";
 import Popup from "../components/popup/Popup";
+
+import classes from "../components/users/Users.module.css";
 
 import useAxios from "../services/useAxios";
 import AddUser from "../components/users/AddUser";
@@ -48,41 +50,46 @@ const UsersRegistry = () => {
   return (
     <div>
       <Navbar />
+      <div class="layout">
+        <h1 class="user-spacing user-title">User Registry</h1>
+        <p class="user-title">
+          A general view of all your members in your organization
+        </p>
 
-      <h1 className={classes.h1}>User Registry</h1>
-      <p>A general view of all your members in your organization</p>
-
-      <table border="1">
-        {loading ? (
-          "loading..."
-        ) : (
-          <div>
-            {error && <div>{error.message}</div>}
+        <table border="1" class="user-spacing" id="user-table">
+          {loading ? (
+            "loading..."
+          ) : (
             <div>
-              {" "}
-              {/* loadedUsers */}
-              <tr>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Team</th>
-                <th>Active</th>
-                <th>Admin</th>
-                <th>Status</th>
-              </tr>
-              <UserTable users={response} />
-              {console.log(response)}
+              {error && <div>{error.message}</div>}
+              <div>
+                {" "}
+                {/* loadedUsers */}
+                <tr class="user-table-divider">
+                  <th class="user-table-title">Name</th>
+                  <th class="user-table-title">Email</th>
+                  <th class="user-table-title">Team</th>
+                  <th class="user-table-title">Active</th>
+                  <th class="user-table-title">Admin</th>
+                  <th class="user-table-title">Status</th>
+                </tr>
+                <UserTable users={response} />
+                {console.log(response)}
+              </div>
             </div>
-          </div>
-        )}
-      </table>
+          )}
+        </table>
 
-      <div className={classes.newActions}>
-        <button onClick={clickAddUser}>Add User</button>
-      </div>
+        <div className={classes.newActions}>
+          <button onClick={clickAddUser}>Add User</button>
+        </div>
+
 
       <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
-        <AddUser />
+          <AddUser />
       </Popup>
+      
+    </div>
     </div>
   );
 };

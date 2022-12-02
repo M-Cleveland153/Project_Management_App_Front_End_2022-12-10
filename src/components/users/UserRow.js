@@ -1,14 +1,14 @@
-// import classes from "./Users.module.css";
+import "../users/UsersStyle.css";
 
 function UserRow(props) {
   return (
-    <tr>
-      <td>{props.name}</td>
-      <td>{props.email}</td>
-      <td>{props.team}</td>
-      <td>{props.active.toString()}</td>
-      <td>{props.admin.toString()}</td>
-      <td>{props.status}</td>
+    <tr class="user-table-divider">
+      <td class="user-info">{props.name}</td>
+      <td class="user-info">{props.email}</td>
+      <td class="user-info">{props.team}</td>
+      <td class="user-info user-status">{props.active.toString()}</td>
+      <td class="user-info user-status">{props.admin.toString()}</td>
+      <td class="user-info">{props.status}</td>
     </tr>
   );
 }

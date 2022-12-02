@@ -66,7 +66,7 @@ const Announcements = () => {
       {/*loading & error handling for API response */}         
       {loading ? ( <p>loading...</p>) : 
        (
-        <div>
+        <div className={classes.list}>
             {error && (
                 <div>
                     <p>{error.message}</p>
