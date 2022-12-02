@@ -90,6 +90,7 @@ const UsersRegistry = () => {
       </Popup>
       
     </div>
+    </div>
   );
 };
 
