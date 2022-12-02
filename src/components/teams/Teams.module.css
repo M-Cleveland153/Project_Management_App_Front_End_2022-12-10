@@ -144,3 +144,14 @@ p {
   justify-content: center;
   
 }
+
+.teamInfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.cardLayout {
+  display: flex;
+  flex-direction: column;
+}

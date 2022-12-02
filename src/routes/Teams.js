@@ -1,14 +1,9 @@
 import React, { useState } from "react";
-
 import Navbar from "../components/Navbar";
-
 import Popup from "../components/popup/Popup";
 import CreateTeam from "../components/teams/CreateTeam";
-
 import TeamList from "../components/teams/TeamList";
-
 import classes from "../components/announcements/Announcements.module.css";
-
 import useAxios from "../services/useAxios";
 
 const Teams = () => {
