@@ -8,6 +8,7 @@ import AddAnnouncement from "../components/announcements/AddAnnouncement";
 import classes from "../components/announcements/Announcements.module.css";
 
 import useAxios from "../services/useAxios";
+import moment from "moment"
 
 const Announcements = () => {
   // const loadedAnnouncements = [
@@ -73,7 +74,7 @@ const Announcements = () => {
                 </div>
             )}
             <div>                     
-              <AnnouncementList announcements={response} />
+              <AnnouncementList announcements={response.sort((a,b) => moment(b.date).diff(a.date))} />
               {console.log(response)}
             </div>
         </div>

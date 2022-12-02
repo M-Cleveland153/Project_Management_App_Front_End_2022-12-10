@@ -4,6 +4,7 @@ import ProjectList from "../components/projects/ProjectList";
 import Navbar from '../components/Navbar';
 import Popup from "../components/popup/Popup";
 import CreateProject from "../components/projects/CreateProject";
+import moment from "moment"
 
 import useAxios from "../services/useAxios";
 
@@ -58,7 +59,7 @@ const Projects = () => {
                 </div>
               )}
               <div>                {/* loadedProjects */}
-                <ProjectList projects={response} />
+                <ProjectList projects={response.sort((a,b) => moment(b.date).diff(a.date))} />
                 {console.log(response)}
               </div>
          </div>
