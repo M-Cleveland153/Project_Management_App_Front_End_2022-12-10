@@ -8,6 +8,8 @@ function AnnouncementList(props) {
         <AnnouncementItem
           key={announcement.id}
           id={announcement.id}
+          firstName={announcement.first}
+          lastName={announcement.last}
           user={announcement.user}
           date={announcement.date} 
           message={announcement.message}         

@@ -3,6 +3,13 @@ import classes from "../components/projects/Projects.module.css";
 import ProjectList from "../components/projects/ProjectList";
 import Navbar from '../components/Navbar';
 import Popup from "../components/popup/Popup";
+<<<<<<< Updated upstream
+=======
+import CreateProject from "../components/projects/CreateProject";
+import moment from "moment"
+
+import useAxios from "../services/useAxios";
+>>>>>>> Stashed changes
 
 const Projects = () => {
   let loadedProjects = [{
@@ -39,8 +46,29 @@ const Projects = () => {
         <h1 className={classes.h1}>Projects</h1>
         <div className={classes.newActions}>
           <button onClick={clickNew}>New</button>
+<<<<<<< Updated upstream
         </div>        
         <ProjectList projects={loadedProjects} />
+=======
+        </div>
+        {loading ? ( <p>loading...</p>) : 
+        (
+          <div>
+              {error && (
+                <div>
+                  <p>{error.message}</p>
+                </div>
+              )}
+              <div>                {/* loadedProjects */}
+                <ProjectList projects={response.sort((a,b) => moment(b.date).diff(a.date))} />
+                {console.log(response)}
+              </div>
+         </div>
+        )}
+
+        
+
+>>>>>>> Stashed changes
         <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
           <h3>Overlay Template Title</h3>
           <p>Michael was here...</p>

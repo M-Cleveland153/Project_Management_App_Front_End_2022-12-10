@@ -113,3 +113,16 @@
   position: relative;
   left: 200px;
 }
+<<<<<<< Updated upstream
+=======
+
+.title {
+  display: flex;
+  color: white;
+}
+
+.title > p {
+  width: auto;
+  margin-left: auto;
+}
+>>>>>>> Stashed changes

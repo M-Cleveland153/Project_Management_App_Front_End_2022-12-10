@@ -5,6 +5,14 @@ import Navbar from "../components/Navbar";
 import Popup from "../components/popup/Popup";
 import AddAnnouncement from "../components/announcements/AddAnnouncement";
 
+<<<<<<< Updated upstream
+=======
+import classes from "../components/announcements/Announcements.module.css";
+
+import useAxios from "../services/useAxios";
+import moment from "moment"
+
+>>>>>>> Stashed changes
 const Announcements = () => {
   const loadedAnnouncements = [
     {
@@ -45,9 +53,34 @@ const Announcements = () => {
          
       <section>
       <Navbar />
+<<<<<<< Updated upstream
         <h1 className={classes.h1}>Announcements</h1>
         <div className={classes.actions}>
           <button onClick={clickNew}>New</button>
+=======
+      <div className={classes.layout}>
+      <h1 className={classes.h1}>Announcements</h1>
+
+      <div className={classes.actions}>
+        <button onClick={clickNew}>New</button>
+      </div>
+
+      <hr className={classes.hr}></hr>
+
+      {/*loading & error handling for API response */}         
+      {loading ? ( <p>loading...</p>) : 
+       (
+        <div className={classes.list}>
+            {error && (
+                <div>
+                    <p>{error.message}</p>
+                </div>
+            )}
+            <div>                     
+              <AnnouncementList announcements={response.sort((a,b) => moment(b.date).diff(a.date))} />
+              {console.log(response)}
+            </div>
+>>>>>>> Stashed changes
         </div>
         <hr className={classes.hr}></hr>
         <AnnouncementList announcements={loadedAnnouncements} />

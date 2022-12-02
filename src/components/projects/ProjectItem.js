@@ -1,6 +1,11 @@
 import React, { useState } from "react";
 import classes from "./Projects.module.css";
 import Popup from "../popup/Popup";
+<<<<<<< Updated upstream
+=======
+import EditProject from "./EditProject";
+import moment from "moment"
+>>>>>>> Stashed changes
 
 function ProjectItem(props) {
   const [buttonPopup, setButtonPopup] = useState(false);
@@ -11,7 +16,10 @@ function ProjectItem(props) {
   return (
     <li className={classes.li}>
       <hr className={classes.hr}></hr>
-      <p className={classes.name}>{props.name}</p>
+      <div className={classes.title}>
+        <h4>{props.name}</h4>
+        <p>{moment(props.date).fromNow()}</p>
+      </div>
       <p className={classes.description}>{props.description}</p>
       <div className={classes.editActions}>
         <button onClick={clickEdit}>Edit</button>
