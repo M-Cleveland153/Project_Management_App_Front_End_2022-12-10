@@ -13,8 +13,12 @@ function ProjectItem(props) {
   return (
     <li className={classes.li}>
       <div className={classes.projItemContentDiv}>
+
         <hr className={classes.hr}></hr>
         <p className={classes.name}>{props.name}</p>
+        <div className={classes.lastEdited}>
+        <p>{moment(props.date).fromNow()}</p>
+        </div>
         <p className={classes.description}>{props.description}</p>
         <div className={classes.editActions}>
           <button onClick={clickEdit}>Edit</button>

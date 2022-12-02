@@ -29,6 +29,28 @@
   text-align: center;
 }
 
+.lastEdited{
+
+  color: #ffffff;
+
+  position: relative;
+  left: 250px;
+  right: 73.26%;
+  top: 30.53%;
+  bottom: 66.25%;
+
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 150%;
+  /* identical to box height, or 36px */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
 .title {
   position: relative;
   left: 250px;
