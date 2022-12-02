@@ -1,8 +1,21 @@
 import React from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import "../components/login/LoginStyles.css";
 
 const Login = () => {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleUsernameChange = (event) => {
+    setUsername(event.target.value);
+  };
+
+  const handlePasswordChange = (event) => {
+    setPassword(event.target.value);
+  };
+  const enabled = username.length > 0 && password.length > 0;
+
   return (
     <div class="layout">
       <h1 class="login-h1" id="top">
@@ -22,15 +35,21 @@ const Login = () => {
           placeholder="Username"
           type="text"
           name="username"
+          value={username}
+          onChange={handleUsernameChange}
         />
         <input
           class="login-input"
           placeholder="Password"
           type="text"
           name="password"
+          value={password}
+          onChange={handlePasswordChange}
         />
         <Link to="/select-company">
-          <button id="login-button">LOG IN</button>
+          <button disabled={!enabled} id="login-button">
+            LOG IN
+          </button>
         </Link>
       </form>
     </div>
