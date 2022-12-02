@@ -6,12 +6,13 @@ function TeamItem(props) {
     <Card>
       <div className={classes.cardLayout}>
         <div className={classes.teamInfo}>
-          <p>{props.teamName}</p>
-          <p>Projects: {props.numberOfProjects}</p>
+          <h4 className={classes.header}>{props.teamName}</h4>
+          <p className={classes.p}># of Projects: {props.numberOfProjects}</p>
         </div>
+        <p className={classes.members}>Members</p>
         <div className={classes.teamMembers}>
           {props.members.map((member) => (
-            <button> {member}</button>
+            <div className={classes.memberContainer}> {member}</div>
           ))}
         </div>
       </div>

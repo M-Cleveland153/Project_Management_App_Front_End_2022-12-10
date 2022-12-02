@@ -1,9 +1,8 @@
 .card {
   background-color: #0b2d45;
   border-radius: 20px;
-  width: 313px;
-  height: 341px;
-  left: 270px;
+  width: 20vw;
+  height: 35vh;
   margin: 1rem;
   display: flex;
   padding: 1.5rem;
