@@ -134,3 +134,13 @@
   position: relative;
   left: 200px;
 }
+
+.projItemContentDiv{
+  z-index: 5;
+  position: relative;
+}
+
+.projItemPopupDiv{
+  z-index: 6;
+  position: relative;
+}
