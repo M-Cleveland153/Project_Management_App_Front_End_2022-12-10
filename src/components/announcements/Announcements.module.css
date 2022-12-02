@@ -68,6 +68,10 @@
   padding: 0;
 }
 
+.list {
+  padding-left: 80px;
+}
+
 .li {
   margin: 30px;
 }
@@ -91,7 +95,7 @@
 .layout{
   display: flex;
   flex-direction: column;
-  padding-left: 135px;
+  padding-left: 120px;
 }
 
 .actions button {

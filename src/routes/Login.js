@@ -4,7 +4,7 @@ import "../components/login/LoginStyles.css";
 
 const Login = () => {
   return (
-    <div>
+    <div class="layout">
       <h1 class="login-h1" id="top">
         COOK SYSTEMS
       </h1>

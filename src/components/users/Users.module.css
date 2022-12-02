@@ -1,20 +1,7 @@
-.h1 {
-    color: #1ba098;
-    left: 710px;
-    position: relative;
-    font-family: "Mulish";
-    font: "Mulish";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 48px;
-    line-height: 150%;
-  }
-
-  .newActions button{
+.newActions button{
     /* color: #ffffff; */
  background-color: #1ba098;
  position: relative;
- left: 120px;
  width: 103px;
  height: 32px;
  border-radius: 10.2875px;
@@ -25,10 +12,10 @@
  font-size: 16.2439px;
  line-height: 150%;
  /* or 24px */
-
+ margin-top: 3rem;
+ margin-bottom: 5rem;
  align-items: center;
  text-align: center;
 
  color: rgba(255, 255, 255, 0.75);
-
 }
