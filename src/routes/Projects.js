@@ -66,9 +66,11 @@ const Projects = () => {
         </div>
       )}
 
-      <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
-        <CreateProject />
-      </Popup>
+      <div className={classes.projItemPopupDiv}>
+        <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
+          <CreateProject />
+        </Popup>
+      </div>
     </section>
   );
 };

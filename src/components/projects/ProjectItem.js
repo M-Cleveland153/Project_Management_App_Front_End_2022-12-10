@@ -11,15 +11,19 @@ function ProjectItem(props) {
   }
   return (
     <li className={classes.li}>
-      <hr className={classes.hr}></hr>
-      <p className={classes.name}>{props.name}</p>
-      <p className={classes.description}>{props.description}</p>
-      <div className={classes.editActions}>
-        <button onClick={clickEdit}>Edit</button>
+      <div className={classes.projItemContentDiv}>
+        <hr className={classes.hr}></hr>
+        <p className={classes.name}>{props.name}</p>
+        <p className={classes.description}>{props.description}</p>
+        <div className={classes.editActions}>
+          <button onClick={clickEdit}>Edit</button>
+        </div>
       </div>
-      <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
-        <EditProject />
-      </Popup>
+      <div className={classes.projItemPopupDiv}>
+        <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
+          <EditProject />
+        </Popup>
+      </div>
     </li>
   );
 }

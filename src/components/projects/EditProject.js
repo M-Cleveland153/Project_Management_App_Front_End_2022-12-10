@@ -3,18 +3,28 @@ import "./EditProject.css";
 import { AiOutlineCloseCircle } from "react-icons/ai";
 
 const EditProject = () => {
+  const setInputHeight = (element, defaultHeight) => {
+    if (element) {
+      const target = element.target ? element.target : element;
+      target.style.height = defaultHeight;
+      target.style.height = `${target.scrollHeight}px`;
+    }
+  };
+
+  
   return (
     <form>
       <button class="close-btn">
         <AiOutlineCloseCircle />
       </button>
-      <div>
-        {/* <p class="announcement">project name</p> */}
-        <textarea class="announcement-input" placeholder="Enter project name" name="announcement-input"></textarea>
-        </div>
-        <div>
-        {/* <p class="announcement">description</p> */}
-        <textarea class="announcement-input" placeholder="Enter announcement" name="announcement-input"></textarea>
+      <div class="inputs">
+        <input class="project-name" placeholder="Enter project name"></input>
+
+        <textarea
+          class="project-info"
+          placeholder="Enter description"
+          onChange={(event) => setInputHeight(event, "10px")}
+        ></textarea>
       </div>
       <button class="submit-btn">Submit</button>
     </form>
