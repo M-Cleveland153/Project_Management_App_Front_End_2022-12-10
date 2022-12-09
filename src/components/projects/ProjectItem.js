@@ -13,6 +13,10 @@ function ProjectItem(props) {
   return (
     <li className={classes.li}>
       <div className={classes.projItemContentDiv}>
+      <div className={classes.title}>
+        <h4>{props.name}</h4>
+        <p>{moment(props.date).fromNow()}</p>
+      </div>
         <hr className={classes.hr}></hr>
         <p className={classes.name}>{props.name}</p>
         <p className={classes.description}>{props.description}</p>
